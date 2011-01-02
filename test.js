@@ -7,7 +7,7 @@
       lagTimer, lagLog = [],
       parser = new Worker('parser.js'),
       fetcherParser = new Worker('fetcherParser.js'),
-      payloadSrc = 'payload+.json';
+      payloadSrc = 'payload.json';
 
 
 
