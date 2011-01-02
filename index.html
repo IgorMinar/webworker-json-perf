@@ -47,5 +47,27 @@
         <td><pre id="log-async-out"></pre></td>
       </tr>
     </table>
+    <dl>
+      <dt>total duration</dt>
+      <dd>from hitting run until accessing parsed object in the UI thread</dd>
+      <dt>parse</dt>
+      <dd>total time spent parsing including web worker messaging (total time without xhr)</dd>
+      <dt>post msg</dt>
+      <dd>duration of calling postMessage  to send a msg to a worker</dd>
+      <dt>in</dt>
+      <dd>duration of from when a message is sent into a worker until it is received by the worker</dd>
+      <dt>net parse</dt>
+      <dd>net parsing duration (duration of the JSON.parse call)</dd>
+      <dt>out</dt>
+      <dd>duration from when a response message is sent from the worker until it is received by the main ui thread</dd>
+      <dt>xhr duration</dt>
+      <dd>duration of the xhr call</dd>
+      <dt>string length</dt>
+      <dd>length of the json payload</dd>
+      <dt>array length</dt>
+      <dd>length of the parsed array</dd>
+      <dt>max lag</dt>
+      <dd>top 5 longest latencies in the UI thread</dd>
+    </dl>
   </body>
 </html>
