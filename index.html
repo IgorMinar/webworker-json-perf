@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WebWorker Json Parsing Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="test.js"></script>
+    <style>
+      th {
+        width: 18em;
+      }
+      td {
+        width: 18em;
+        vertical-align: top;
+        padding-right: 1.5em;
+      }
+
+      #desc-row {
+        font-size: 0.9em;
+        text-align: justify;
+      }
+
+      #button-row {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body lang="en">
+    <table>
+      <tr>
+        <th>Sync Parsing</th>
+        <th>Async In&amp;Out Parsing</th>
+        <th>Async Out Parsing</th>
+      </tr>
+      <tr id="desc-row">
+        <td>Fetches json and parses it in the UI thread.</td>
+        <td>Fetches json in the UI thread and asks webworker to parse it and return obj.</td>
+        <td>UI thread just asks webworker to fetch json, parse it and return the obj.</td>
+      </tr>
+      <tr id="button-row">
+        <td><button id="sync">Run</button></td>
+        <td><button id="async-inout">Run</button></td>
+        <td><button id="async-out">Run</button></td>
+      </tr>
+      <tr>
+        <td><pre id="log-sync"></pre></td>
+        <td><pre id="log-async-inout"></pre></td>
+        <td><pre id="log-async-out"></pre></td>
+      </tr>
+    </table>
+  </body>
+</html>
